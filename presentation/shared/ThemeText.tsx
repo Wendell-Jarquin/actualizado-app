@@ -17,6 +17,7 @@ const ThemeText = ({ className, type="normal", ...rest }: Props) => {
   return (
     
     <Text className={[ 
+        
         //. color base que reacciona al sistema
         "text-light-text dark:text-dark-text",
         //. intectadas segun el type
@@ -28,11 +29,13 @@ const ThemeText = ({ className, type="normal", ...rest }: Props) => {
 
         // cualquier clase
         className,
-    ].join(" ")} {...rest}>
+    ].join(" ")} {...rest}
+    
+    />
+
 
         
-        ThemeText
-    </Text>
+    
     
   )
 }
