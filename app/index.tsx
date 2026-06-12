@@ -7,7 +7,7 @@ export default function IndexScreen() {
     <ThemedView margin>
    
       <Text className="text-3xl font-bold text-light-text dark:text-dark-text">
-        HOLA MUNDO
+        Hola mundo
       </Text>
   
 
