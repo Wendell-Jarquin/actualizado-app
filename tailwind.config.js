@@ -1,32 +1,43 @@
-import { Colors } from './constants/Colors'
+import { Colors } from "./constants/Colors";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // NOTE: Update this to include the paths to all files that contain Nativewind classes.
+  // Aseguramos que lea nuestros futuros componentes en 'presentation'
   content: [
-    './app/**/*.{js,jsx,ts,tsx}',
-    './presentation/**/*.{js,jsx,ts,tsx}'
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./presentation/**/*.{js,jsx,ts,tsx}",
   ],
-  presets: [require('nativewind/preset')],
+  presets: [require("nativewind/preset")],
   theme: {
     extend: {
-      light: {
-        primary: Colors.light.primary,
-        secondary: Colors.light.secondary,
-        tertiary: Colors.light.tertiary,
-        success: Colors.light.success,
-        backgroud: Colors.light.background,
-        text: Colors.light.text
+      colors: {
+        // Mapeamos los colores de Expo hacia clases de Tailwind
+        light: {
+          primary: Colors.light.primary,
+          secondary: Colors.light.secondary,
+          tertiary: Colors.light.tertiary,
+          success: Colors.light.success,
+          background: Colors.light.background,
+          text: Colors.light.text,
+          tint: Colors.light.tint,
+          icon: Colors.light.icon,
+          tabIconDefault: Colors.light.tabIconDefault,
+          tabIconSelected: Colors.light.tabIconSelected,
+        },
+        dark: {
+          primary: Colors.dark.primary,
+          secondary: Colors.dark.secondary,
+          tertiary: Colors.dark.tertiary,
+          success: Colors.dark.success,
+          background: Colors.dark.background,
+          text: Colors.dark.text,
+          tint: Colors.dark.tint,
+          icon: Colors.dark.icon,
+          tabIconDefault: Colors.dark.tabIconDefault,
+          tabIconSelected: Colors.dark.tabIconSelected,
+        },
       },
-      dark: {
-        primary: Colors.dark.primary,
-        secondary: Colors.dark.secondary,
-        tertiary: Colors.dark.tertiary,
-        success: Colors.dark.success,
-        backgroud: Colors.dark.background,
-        text: Colors.dark.text
-      }
-    }
+    },
   },
-  plugins: []
-}
+  plugins: [],
+};
