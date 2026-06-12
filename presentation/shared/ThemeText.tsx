@@ -24,8 +24,7 @@ const ThemeText = ({ className, type="normal", ...rest }: Props) => {
         type === "h1" ? "text-3xl " : undefined,
         type === "h2" ? "text-xl" : undefined,
         type === "semi-bold" ? "font-semibold" : undefined,
-        type === "link" ? "font-normal" : undefined,
-        type === "normal" ? "font-normal" : undefined,
+        type === "link" ? "font-normal underline " : undefined,
 
         // cualquier clase
         className,
